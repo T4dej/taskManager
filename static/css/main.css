@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+table{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+input{
+    border-radius: 5px;
+}
+
+th {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+#content{
+    width: 30%;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    margin: 5px;
+}
+
+#update{
+    color: black;
+}
+
+#delete{
+    color: red;
+}
+
+button, .deletall{
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.title p{
+    text-align: right;
+    margin-right: 50px;    
+}
+    

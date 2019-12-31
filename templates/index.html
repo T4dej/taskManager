@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block head %} 
+<title>Task</title>
+{% endblock head %}
+
+{% block body %} 
+<div class="content">
+    <div class="title">
+        <h1>Task Manager</h1>
+        <p id="help"><i class="fas fa-pencil-alt"> = Update |</i>
+        <i class="fas fa-times"> = Delete</i></p>
+    </div>
+
+
+    <form id="form" action="/" method="POST">
+        <input type="text" name="content" id="content" autofocus>
+        <input type="submit" value="Add Task">
+    </form>
+    {% if tasks|length < 1 %}
+        <h4 style="text-align: center">There are no tasks. Create one!</h4>
+    {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>                   
+                    <th style="text-align: left;">Task</th>
+                    <th>Added</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            {% for task in tasks %}
+            <tbody>
+                <tr class="active">
+                    <th style="width: 5%;"> {{ task.id }}</th>
+                    <td style="width:85%;text-align: left;">{{ task.content }}</td>
+                    <td style="width:5%;">{{ task.data_created.date().strftime("%d.%m.") }} <br>{{ task.data_created.date().strftime("%Y") }}</td>
+                    <td style="width:5%;">
+                        <a id="update" href="/update/{{task.id}}"><i class="fas fa-pencil-alt"></i></a>
+                        <a id="delete" onclick="return confirm('Are you sure you want to delete {{task.content}}?')" href="/delete/{{task.id}}"><i class="fas fa-times"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <br>
+        <button><a class="deletall" onclick="return confirm('Are you sure you want to delete ALL ITEMS from the list!?')" href="/deleteall/">Delete all</a></button>
+    </div>
+    {% endif %}
+{% endblock body %}
