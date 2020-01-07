@@ -49,8 +49,33 @@ button, .deletall{
     color: black;
 }
 
-.title p{
+#list{
+    width: 30%;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#help{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#left{
+    float: left;
+}
+
+#right{
+    float: right;
+}
+
+#title .help1 p{
+    border: 1px solid black;
     text-align: right;
     margin-right: 50px;    
 }
     
+.back {
+    text-align: left;
+    margin-left: 50px;
+}
