@@ -1,81 +1,87 @@
 body {
-    text-align: center;
-    font-family: sans-serif;
+  border: 1px solid black;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-table{
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
+i {
+  font-weight: bold;
 }
 
-input{
-    border-radius: 5px;
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+input {
+  border-radius: 5px;
+}
+
+input:first-child {
+  width: 30%;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th {
-    border-bottom: 1px solid #ddd;
-    padding: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
 }
 
 td {
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
 }
 
-#content{
-    width: 30%;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
+a {
+  margin: 5px;
 }
 
-a{
-    margin: 5px;
+#update {
+  color: black;
 }
 
-#update{
-    color: black;
+.fa-times {
+  color: red;
 }
 
-#delete{
-    color: red;
+#delete {
+  color: red;
 }
 
-button, .deletall{
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
+button,
+.deletall {
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
 
-#list{
-    width: 30%;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
+#list {
+  width: 30%;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#help{
-    margin-left: 50px;
-    margin-right: 50px;
+#help {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-#left{
-    float: left;
+#left {
+  float: left;
+  margin-left: 10%;
 }
 
-#right{
-    float: right;
+#title .help1 p {
+  text-align: right;
+  margin-right: 50px;
 }
 
-#title .help1 p{
-    border: 1px solid black;
-    text-align: right;
-    margin-right: 50px;    
-}
-    
 .back {
-    text-align: left;
-    margin-left: 50px;
+  text-align: left;
+  margin-left: 50px;
 }

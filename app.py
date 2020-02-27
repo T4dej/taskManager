@@ -45,7 +45,8 @@ def add(id):
         try:
             db.session.add(new_list)
             db.session.commit()
-            return redirect("/")
+            lists = db.session.query(List.list_content).filter(id==List.task_id).all()
+            return render_template("add.html", site=id, lists=lists)
         except:
             return "There was an issue adding your list"
     else:
@@ -57,7 +58,6 @@ def add(id):
 
 
 # Delete a task at index 
-
 @app.route("/delete/<int:id>")
 def delete(id):
     task_to_delete = Task.query.get_or_404(id)
